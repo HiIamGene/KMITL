@@ -14,10 +14,12 @@
             <b-dropdown-item v-if="role === 'admin'" href='/#/register'>Register</b-dropdown-item>
             <b-dropdown-item href="/" @click="logout">Sign Out</b-dropdown-item>
             
+            
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <br>
     <b-button type="submit" @click="onHistory" variant="danger" style="width:200px;height:100px">Run graph</b-button><br><br>
     <!--<b-button type="botton" @click="onSetting" variant="danger" style="width:200px;height:100px">Setting</b-button>-->
     <h1 style="color:green;">Infomation</h1><hr>
@@ -26,7 +28,7 @@
     <tr>
 
       <th>Photo</th><br>
-      <img src="pic_trulli.jpg" width="500" height="333">
+       <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />>
 
     </tr>
 
@@ -55,16 +57,16 @@
               records: [],
             series: [{
               name: 'Sensor light',
-              data: [light.data[0], light.data[1], light.data[2], light.data[3], light.data[4], light.data[5], light.data[6]]
+              data:  [31, 40, 28, 51, 42, 109, 100]//[light.data[0], light.data[1], light.data[2], light.data[3], light.data[4], light.data[5], light.data[6]]
             }, {
               name: 'Sensor humidity',
-              data: [humidity.data[0], humidity.data[1], humidity.data[2], humidity.data[3], humidity.data[4], humidity.data[5], humidity.data[6]]
+              data:  [11, 32, 45, 32, 34, 52, 41]//[humidity.data[0], humidity.data[1], humidity.data[2], humidity.data[3], humidity.data[4], humidity.data[5], humidity.data[6]]
             },{
               name: 'Sensor temperature',
-              data: [temperature.data[0], temperature.data[1], temperature.data[2],temperature.data[3], temperature.data[4], temperature.data[5], temperature.data[6]]
+              data:  [13, 25, 60, 11, 34, 52, 49]//[temperature.data[0], temperature.data[1], temperature.data[2],temperature.data[3], temperature.data[4], temperature.data[5], temperature.data[6]]
             },{
               name: 'quality',
-              data: [quality.data[0], quality.data[1], quality.data[2], quality.data[3], quality.data[4], quality.data[5], quality.data[6]]
+              data:  [11, 29, 24, 21, 3, 60, 2]//[quality.data[0], quality.data[1], quality.data[2], quality.data[3], quality.data[4], quality.data[5], quality.data[6]]
             }],
             chartOptions: {
               dataLabels: {
@@ -77,9 +79,9 @@
 
               xaxis: {
                 type: 'datetime',
-                categories: [light.str[0], light.str[1], light.str[2],
-                  light.str[3], light.str[4], light.str[5],
-                  light.str[6]
+                categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"//[light.str[0], light.str[1], light.str[2],
+                  //light.str[3], light.str[4], light.str[5],
+                  //light.str[6]
                 ],
               },
               tooltip: {
